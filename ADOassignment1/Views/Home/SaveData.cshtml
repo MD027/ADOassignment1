@@ -1,0 +1,60 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SaveData</title>
+</head>
+<body>
+    <h1>ADD MATCH RESULT</h1>
+
+    <div>
+        <form action="Savedata/SaveData" method="post">
+            <table border="1" bgcolor="green" height="300" width="300">
+                <tr>
+                    <td>Match ID</td>
+                    <td><input type="number" name="matchid" required /></td>
+                </tr>
+
+                <tr>
+                    <td>Team Name1</td>
+                    <td><input type="text" name="team1" required /></td>
+                </tr>
+                <tr>
+                    <td>Team Name2</td>
+                    <td><input type="text" name="team2" required /></td>
+                </tr>
+                <tr>
+                    <td>Match Status</td>
+                    <td>
+                        <select name="matchstatus" required>
+                            <option value="Win">Win</option>
+                            <option value="Draw">Draw</option>
+
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Winning Team</td>
+                    <td><input type="text" name="winningteam" /></td>
+                </tr>
+                <tr>
+                    <td>Points</td>
+                    <td><input type="number" name="points" required /></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><input type="submit" value="ADD MATCH" /></td>
+                </tr>
+
+            </table>
+            @ViewBag.result
+        </form>
+
+    </div>
+</body>
+</html>
